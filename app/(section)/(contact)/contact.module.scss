@@ -1,0 +1,73 @@
+@import "@/styles/global.module.scss";
+
+.contactMe {
+  @include sectionStyle;
+}
+
+.contactMe {
+  @include sectionMargin;
+
+  .wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+
+    .info {
+      text-align: justify;
+
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin: 25px 0;
+
+        div {
+          text-decoration: none;
+          color: black;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 7px 20px;
+          width: 180px;
+
+          mark {
+            font-size: 1.5rem;
+            font-weight: 800;
+            @include gradientText;
+            animation: gradient 7s infinite;
+          }
+
+          h1 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+              width: 27px;
+              height: 27px;
+              cursor: pointer;
+
+              &.BsFillEnvelopeOpenFill {
+                color: #dd4b39;
+              }
+
+              &.icon.BsWhatsapp {
+                color: #25d366;
+              }
+
+              &.icon.BsTelegram {
+                color: #0088cc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

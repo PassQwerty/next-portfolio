@@ -1,0 +1,20 @@
+@import "@/styles/global.module.scss";
+
+.skills {
+  @include sectionStyle;
+}
+
+.skills {
+  @include sectionMargin;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  .wrapper {
+    display: grid;
+    margin-top: 2rem;
+    gap: 51px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

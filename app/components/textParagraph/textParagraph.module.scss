@@ -1,0 +1,57 @@
+@import "@/styles/global.module.scss";
+
+$colorDarkText: #7b7b7b;
+
+html[theme="dark"] {
+  .textContainer {
+    .textInfo {
+      span {
+        color: $colorDarkText;
+      }
+    }
+
+    .line {
+      background-color: $colorDarkText;
+    }
+  }
+}
+
+.textContainer {
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .textInfo {
+    @include textInfoPage;
+    white-space: nowrap;
+
+    div {
+      height: 3rem;
+      display: flex;
+
+      span {
+        margin-top: 3px;
+      }
+
+      mark {
+        color: red;
+
+        &:first-child {
+          padding-right: 0.5rem;
+        }
+
+        &:last-child {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .line {
+    margin-top: 20px;
+    margin-left: 7px;
+    width: 100%;
+    background-color: $greyColor;
+    height: 2px;
+  }
+}

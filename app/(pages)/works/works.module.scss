@@ -1,0 +1,134 @@
+@import "@/styles/global.module.scss";
+
+$iconSize: 30px;
+$wrapIconSize: 50px;
+
+html[theme="dark"] {
+  .works {
+    .filterWrapper {
+      background-color: $backgroundColorHeaderAndFooter;
+      box-shadow: none;
+
+      .filter {
+        span {
+          color: black;
+        }
+
+        li {
+          background-color: $iconBackColor;
+        }
+
+        li.active {
+          background-color: $iconBackColorHover;
+        }
+
+        li:hover {
+          background-color: $iconBackColorHover;
+        }
+      }
+    }
+  }
+}
+
+.works {
+  @include sectionStyle;
+  @include sectionMargin;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapperText {
+    margin: 2rem 0px;
+
+    .text {
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      background-image: linear-gradient(90deg, orange, red, orange);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient 2s infinite;
+      background-size: 350%;
+
+      @keyframes gradient {
+        0% {
+          background-position-x: 0px;
+        }
+        50% {
+          background-position-x: 300px;
+        }
+        100% {
+          background-position-x: 0px;
+        }
+      }
+    }
+  }
+
+  .filterWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: black;
+    }
+
+    .filter {
+      @include contactsBlock;
+
+      align-items: center;
+
+      li {
+        cursor: pointer;
+        background-color: rgba(255, 215, 144, 0.3);
+      }
+
+      li.active {
+        background-color: rgba(233, 195, 130, 0.5);
+      }
+
+      li:hover {
+        background-color: rgba(233, 195, 130, 0.5);
+      }
+
+      li,
+      svg {
+        @include iconPosition;
+      }
+
+      li,
+      svg {
+        border-radius: 8px;
+        height: $wrapIconSize;
+        width: $wrapIconSize;
+      }
+
+      svg {
+        width: $iconSize;
+        height: $iconSize;
+
+        path {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px 30px;
+    }
+  }
+}

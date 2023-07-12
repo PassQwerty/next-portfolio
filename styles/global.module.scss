@@ -1,0 +1,120 @@
+/* LIGHT */
+$bodyColor: #fbf8f3;
+$greyColor: #7b7b7b;
+$tagsColor: #f8f0e280;
+$tagsBorderColor: #7b7b7b24;
+$sectionMargin: 5rem;
+
+/* DARK */
+$backgroundColorHeaderAndFooter: rgba(28, 31, 43, 0.7);
+$textColor: #fbf8f3;
+$textColor2: #fbf8f3c1;
+$textBackColor: #fbf8f370;
+$textColorHover: #ff7d00;
+$iconBackColor: #fbf8f370;
+$iconBackColorHover: #fbf8f3;
+
+/*DARK THEME*/
+html[theme="dark"] {
+  .body {
+    background-color: #2e3245;
+
+    span,
+    h1,
+    button {
+      color: $textColor;
+    }
+
+    svg {
+      color: $textColor;
+    }
+  }
+}
+/*DARK THEME*/
+
+.body {
+  background-color: $bodyColor;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .wrapper {
+  }
+
+  .main {
+  }
+}
+
+@mixin gradientText {
+  background-image: linear-gradient(90deg, orange, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s infinite;
+  background-size: 350%;
+
+  @keyframes gradient {
+    0% {
+      background-position-x: 0px;
+    }
+    50% {
+      background-position-x: 300px;
+    }
+    100% {
+      background-position-x: 0px;
+    }
+  }
+}
+
+@mixin iconPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin navigationBar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+@mixin iconStyle {
+  width: 27px;
+  height: 27px;
+
+  path {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@mixin contactsBlock {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@mixin sectionStyle {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@mixin sectionMargin {
+  margin-top: $sectionMargin;
+  margin-bottom: $sectionMargin;
+}
+
+@mixin textInfoPage {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  mark {
+    background: transparent;
+  }
+}

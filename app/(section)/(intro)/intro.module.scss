@@ -1,0 +1,162 @@
+@import "@/styles/global.module.scss";
+
+html[theme="dark"] {
+  .intro {
+    .iconScroll {
+      border: 2px solid $textColor;
+
+      &::before {
+        background-color: $textColorHover;
+      }
+    }
+  }
+}
+
+.intro {
+  @include sectionStyle;
+}
+
+.intro {
+  padding-top: 4.5rem;
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    align-items: center;
+    justify-items: center;
+    gap: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .wrap {
+      .gradientText {
+        font-size: 3rem;
+        font-weight: bold;
+
+        mark {
+          @include gradientText;
+        }
+      }
+
+      .btn {
+        font-weight: 600;
+        position: relative;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid $greyColor;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background-image: linear-gradient(90deg, orange, red, orange);
+          background-size: 350%;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          animation: gradient 2s infinite ease-in-out;
+          border-radius: 50px;
+        }
+
+        &:hover {
+          color: white;
+
+          &::before {
+            opacity: 1;
+          }
+
+          border-color: white;
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position-x: 0px;
+          }
+          50% {
+            background-position-x: 300px;
+          }
+          100% {
+            background-position-x: 0px;
+          }
+        }
+      }
+    }
+
+    img {
+      border: 3px solid;
+      border-radius: 65% 35% 51% 49% / 60% 29% 71% 40%;
+
+      animation: borderAnimation 15s infinite linear;
+      animation-timing-function: linear;
+
+      @keyframes borderAnimation {
+        0% {
+          border-color: tomato;
+          border-radius: 65% 35% 51% 49% / 60% 29% 71% 40%;
+        }
+        20% {
+          border-color: tomato;
+          border-radius: 63% 37% 48% 52% / 33% 73% 27% 67%;
+        }
+        40% {
+          border-color: red;
+          border-radius: 41% 59% 50% 50% / 66% 28% 72% 34%;
+        }
+        60% {
+          border-color: red;
+          border-radius: 59% 41% 70% 30% / 36% 63% 37% 64%;
+        }
+        80% {
+          border-color: tomato;
+          border-radius: 39% 61% 39% 61% / 60% 31% 69% 40%;
+        }
+        100% {
+          border-color: tomato;
+          border-radius: 65% 35% 51% 49% / 60% 29% 71% 40%;
+        }
+      }
+    }
+  }
+
+  .iconScroll {
+    border: 2px solid black;
+    height: 35px;
+    width: 17px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+
+    &::before {
+      content: "";
+      background-color: black;
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin-left: 3px;
+
+      animation: ball 2s infinite;
+
+      @keyframes ball {
+        from {
+          margin-top: 3px;
+        }
+        to {
+          background-color: transparent;
+          margin-top: 23px;
+        }
+      }
+    }
+  }
+}

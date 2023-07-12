@@ -1,0 +1,381 @@
+@import "@/styles/global.module.scss";
+
+$iconSize: 30px;
+$wrapIconSize: 50px;
+$colorIcon: #474747;
+
+$paddingContent: 20px;
+
+html[theme="dark"] {
+  .workLoader,
+  .work {
+    .btnWrapper {
+      .btnPrevious {
+        color: $textColor;
+        background-color: $textBackColor;
+
+        &:hover {
+          background-color: $textBackColor;
+        }
+      }
+    }
+    .info {
+      background-color: $textBackColor;
+
+      .container1 {
+        .links {
+          .link {
+            transition: 0.4s;
+
+            &:hover {
+              background-color: $backgroundColorHeaderAndFooter;
+              transition: 0.4s;
+
+              span {
+                font-weight: 500;
+                color: $textColor;
+                transition: 0;
+              }
+
+              .icon,
+              .iconDemo {
+                width: 20px;
+                height: 20px;
+                transition: 0;
+              }
+
+              .icon {
+                svg {
+                  color: $textColor;
+                  transition: 0;
+                }
+
+                path {
+                  fill: $textColor;
+                  transition: 0;
+                }
+              }
+
+              .iconDemo {
+                svg {
+                  color: $textColor;
+                  transition: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .container2 {
+        .containerDescription {
+          background-color: $backgroundColorHeaderAndFooter;
+
+          .description {
+            color: $textColor2;
+          }
+
+          .containerTags {
+            .tags {
+              span {
+                color: $textColor;
+                background-color: $backgroundColorHeaderAndFooter;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.workLoader {
+  @include sectionStyle;
+  @include sectionMargin;
+
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+
+  width: 100%;
+  height: 500px;
+
+  .info2 {
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+      color: rgb(233, 195, 130);
+      font-size: 100px;
+      text-indent: -9999em;
+      overflow: hidden;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      position: relative;
+      transform: translateZ(0);
+      animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+    }
+
+    @keyframes mltShdSpin {
+      0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+      }
+      5%,
+      95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+      }
+      10%,
+      59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+          -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+          -0.297em -0.775em 0 -0.477em;
+      }
+      20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+          -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+          -0.749em -0.34em 0 -0.477em;
+      }
+      38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+          -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+          -0.82em -0.09em 0 -0.477em;
+      }
+      100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+          0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+      }
+    }
+
+    @keyframes round {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    margin-bottom: $paddingContent;
+
+    .btnPrevious {
+      color: #575757;
+      background-color: rgba(255, 215, 144, 0.3);
+      font-family: "__Montserrat_656221", "__Montserrat_Fallback_656221";
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 8px;
+      border: 1px solid rgba(123, 123, 123, 0.1411764706);
+      cursor: pointer;
+      transition: 0.3s;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 7px;
+
+      &:hover {
+        background-color: rgba(233, 195, 130, 0.5);
+        transition: 0.3s;
+        color: orangered;
+
+        svg {
+          fill: orangered;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.work {
+  @include sectionStyle;
+  @include sectionMargin;
+
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+
+  .btnWrapper {
+    display: flex;
+    margin-bottom: $paddingContent;
+
+    .btnPrevious {
+      color: #575757;
+      background-color: rgba(255, 215, 144, 0.3);
+      font-family: "__Montserrat_656221", "__Montserrat_Fallback_656221";
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 8px;
+      border: 1px solid rgba(123, 123, 123, 0.1411764706);
+      cursor: pointer;
+      transition: 0.3s;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 7px;
+
+      &:hover {
+        background-color: rgba(233, 195, 130, 0.5);
+        transition: 0.3s;
+        color: orangered;
+
+        svg {
+          fill: orangered;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .text {
+    font-weight: 700;
+    color: #575757;
+  }
+
+  .info2 {
+    width: 80vw;
+    background-color: rgba(255, 215, 144, 0.3);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    padding: 20px;
+
+    .loader {
+    }
+  }
+
+  .info {
+    background-color: rgba(255, 215, 144, 0.3);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: $paddingContent;
+
+    .container1 {
+      display: flex;
+      justify-content: space-between;
+
+      .text {
+        font-size: 2rem;
+        font-weight: 800;
+        @include gradientText;
+      }
+      .links {
+        display: flex;
+        justify-content: left;
+
+        .link {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          font-size: 0.8rem;
+
+          padding: 5px 10px;
+          margin: 3px 5px;
+          background-color: $bodyColor;
+
+          border-radius: 6px;
+          border: 1px solid rgba(123, 123, 123, 0.1411764706);
+
+          transition: 0.4s;
+
+          &:hover {
+            background-color: rgba(233, 195, 130, 0.5);
+            transition: 0.4s;
+          }
+
+          span {
+            font-weight: 500;
+            color: $colorIcon;
+          }
+
+          .icon,
+          .iconDemo {
+            width: 20px;
+            height: 20px;
+          }
+
+          .icon {
+            svg {
+              color: $colorIcon;
+            }
+
+            path {
+              fill: $colorIcon;
+            }
+          }
+
+          .iconDemo {
+            svg {
+              color: $colorIcon;
+            }
+          }
+        }
+      }
+    }
+
+    .container2 {
+      display: flex;
+
+      gap: $paddingContent;
+
+      .containerImage {
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      .containerDescription {
+        background-color: #ffe2b1;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.11);
+
+        display: flex;
+        flex-direction: column;
+        gap: $paddingContent - 10px;
+
+        .description {
+          font-weight: 300;
+          color: #7b7b7b;
+        }
+
+        .containerTags {
+          display: flex;
+          flex-direction: column;
+          gap: $paddingContent - 10px;
+
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $paddingContent - 10px;
+
+            span {
+              color: #7b7b7b;
+              padding: 5px 10px;
+              border: 1px solid rgba(123, 123, 123, 0.1411764706);
+              border-radius: 7px;
+              background-color: rgba(233, 195, 130, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "@/styles/global.module.scss";
+
+$speedButton: 0.5s;
+
+.projects {
+  @include sectionStyle;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapper {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .btnFlip {
+    width: 190px;
+
+    opacity: 1;
+    outline: 0;
+    color: $greyColor;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+
+    margin: 2rem 0px;
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+      }
+
+      &:before {
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+      }
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      color: #adadaf;
+      display: block;
+      transition: $speedButton;
+      position: absolute;
+      background: #323237;
+      content: attr(data-back);
+      transform: translateY(-50%) rotateX(90deg);
+      padding: 5px 15px;
+      border: 1px solid #7b7b7b;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      opacity: 1;
+      color: #5e5e5e;
+      display: block;
+      line-height: 40px;
+      transition: $speedButton;
+      position: relative;
+      background: #fbf7f0;
+      content: attr(data-front);
+      transform: translateY(0) rotateX(0);
+      padding: 5px 15px;
+      width: 100%;
+      border: 1px solid #7b7b7b;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "@/styles/global.module.scss";
+
+$sizeSVG: 45px;
+
+.icon {
+  position: relative;
+
+  &:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 51px;
+    left: 0px;
+    background-color: rgb(94, 94, 94);
+    color: $bodyColor;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  svg {
+    width: $sizeSVG;
+    height: $sizeSVG;
+  }
+}

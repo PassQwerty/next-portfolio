@@ -1,0 +1,143 @@
+@import "@/styles/global.module.scss";
+
+$borderItem: 10px;
+$imageWidth: 370px;
+$imageHeight: 280px;
+
+html[theme="dark"] {
+  .itemContainer {
+    .imageWrapper {
+      .overlay {
+        a {
+          border: 1px solid $textColor;
+        }
+      }
+    }
+
+    .itemInfo {
+      .description {
+        h1 {
+          color: black;
+        }
+      }
+    }
+
+    .links {
+      span {
+        color: black;
+      }
+
+      .icon {
+        svg {
+          color: black;
+        }
+        path {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.itemContainer {
+  width: $imageWidth;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: $imageHeight 320px;
+  grid-template-columns: $imageWidth;
+
+  box-shadow: 0px 0px 10px 2px #00000050;
+
+  .imageWrapper {
+    .overlay {
+      width: 100%;
+      position: relative;
+      left: 1px;
+      bottom: 101%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.388);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2.5px);
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.35);
+        font-size: 1.3rem;
+        border: 1px solid wheat;
+        padding: 8px 15px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  .itemInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        margin: 10px 0px;
+      }
+
+      h3 {
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+
+    .containerTags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+
+      span {
+        padding: 5px 10px;
+        margin: 3px 5px;
+        background-color: $tagsColor;
+        color: $greyColor;
+        border-radius: 6px;
+        border: 1px solid $tagsBorderColor;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: black;
+        font-size: 0.8rem;
+      }
+
+      .icon path {
+        // fill: rgb(0, 0, 0);
+      }
+
+      .icon svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

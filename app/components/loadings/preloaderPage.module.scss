@@ -1,0 +1,47 @@
+@import "@/styles/global.module.scss";
+
+.page {
+  background-color: $bodyColor;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  overflow: hidden;
+
+  $size: 37px;
+  .loader {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(255, 215, 144, 0.8) $size,
+        transparent 0
+      ),
+      linear-gradient(rgb(233, 195, 130) $size, transparent 0),
+      linear-gradient(rgb(233, 195, 130) $size, transparent 0),
+      linear-gradient(rgba(255, 215, 144, 0.8) $size, transparent 0);
+    background-repeat: no-repeat;
+    background-size: $size $size;
+    background-position: left top, left bottom, right top, right bottom;
+    animation: rotate 1s linear infinite;
+
+    @keyframes rotate {
+      from {
+        width: 100px;
+        height: 100px;
+        transform: rotate(0deg);
+      }
+      50% {
+        width: 75px;
+        height: 75px;
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
