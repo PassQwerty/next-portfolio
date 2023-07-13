@@ -1,6 +1,6 @@
 import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import styles from "./skills.module.scss";
-import WrapperMotion from "@/app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { TextVariant, TitleVariant } from "./MotionSkills";
 import SkillsView from "./SkillsView";
 

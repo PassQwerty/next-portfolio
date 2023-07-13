@@ -9,6 +9,11 @@ html[theme="dark"] {
         background-color: $textColorHover;
       }
     }
+    .wrap {
+      .btn {
+        color: white;
+      }
+    }
   }
 }
 
@@ -39,10 +44,11 @@ html[theme="dark"] {
       }
 
       .btn {
+        color: black;
         font-weight: 600;
         position: relative;
         padding: 10px 20px;
-        margin-top: 20px;
+        top: 20px;
         font-family: "Montserrat", sans-serif;
         font-size: 1.3rem;
         text-transform: uppercase;

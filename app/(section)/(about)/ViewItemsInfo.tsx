@@ -1,7 +1,7 @@
 "use client";
 
 import { listVariants } from "./MotionAbout";
-import WrapperMotion from "@app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 
 const itemsInfo: JSX.Element[] = [
   <h1>

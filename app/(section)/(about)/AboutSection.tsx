@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./about.module.scss";
 import TextParagraph from "@/app/components/textParagraph/TextParagraph";
-import WrapperMotion from "@app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { ImageVariant, TitleVariant } from "./MotionAbout";
 import ViewItemsInfo from "./ViewItemsInfo";
 

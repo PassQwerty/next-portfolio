@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import styles from "./intro.module.scss";
-import WrapperMotion from "@/app/components/motion/WrapperMotion";
 import {
   ButtonVariant,
   ImageVariant,
@@ -10,6 +9,7 @@ import {
   TitleVariant,
 } from "./MotionIntro";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function IntroSection() {
   return (
@@ -29,8 +29,14 @@ export default function IntroSection() {
             animate="visible"
             variants={ButtonVariant}
           >
-            <button className={styles.btn}>Мои проекты</button>
+            <Link href="/#projects" className={styles.btn}>
+              Мои проекты
+            </Link>
           </motion.div>
+
+          {/* <WrapperClientComponent>
+            <ButtonGo targetLink={"#/projects"} />
+          </WrapperClientComponent> */}
         </div>
         <motion.div initial="hidden" animate="visible" variants={ImageVariant}>
           <Image

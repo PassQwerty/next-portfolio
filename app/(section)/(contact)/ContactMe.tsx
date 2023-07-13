@@ -1,7 +1,7 @@
 import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import styles from "./contact.module.scss";
 import Image from "next/image";
-import WrapperMotion from "@/app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { ImageVariant, TitleVariant } from "./MotionContact";
 import ContactView from "./ContactView";
 

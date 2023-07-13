@@ -11,7 +11,7 @@ import styles from "./works.module.scss";
 import { ALL_CATEGORIES_WORKS } from "@app/constants/infoArrays";
 import PreloaderItems from "@/app/components/loadings/PreloaderItems";
 import ProjectView from "../../(section)/(project)/ProjectView";
-import WrapperMotion from "@/app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { TitleVariant, listIconsVariants } from "./MotionProject";
 import { motion, useAnimation, useInView } from "framer-motion";
 

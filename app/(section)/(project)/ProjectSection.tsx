@@ -1,7 +1,7 @@
 import styles from "./project.module.scss";
 import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import Link from "next/link";
-import WrapperMotion from "@/app/components/motion/WrapperMotion";
+import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import {
   ButtonVariant,
   DelayBlockProject,
@@ -11,7 +11,7 @@ import ProjectView from "./ProjectView";
 
 export default function ProjectSection(data: Project[]) {
   return (
-    <section className={styles.projects}>
+    <section id="projects" className={styles.projects}>
       <div className={styles.wrapper}>
         <WrapperMotion newVariants={TitleVariant}>
           <TextParagraph icoText={"$"} text={"Мои работы"} />
