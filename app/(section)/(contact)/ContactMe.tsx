@@ -4,15 +4,21 @@ import Image from "next/image";
 import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { ImageVariant, TitleVariant } from "./MotionContact";
 import ContactView from "./ContactView";
+import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
+import Anchor from "@/app/components/anchor/Anchor";
 
 export default function ContactMe() {
   return (
-    <section className={styles.contactMe}>
-      <WrapperMotion newVariants={TitleVariant({ currentDelay: 0.2 })}>
-        <TextParagraph icoText={"@"} text={"Связь со мной"} />
-      </WrapperMotion>
-      {/* prettier-ignore */}
-      <div className={styles.wrapper}>
+    <>
+      <WrapperClientComponent>
+        <Anchor selected={"contactMe"} />
+      </WrapperClientComponent>
+      <section className={styles.contactMe}>
+        <WrapperMotion newVariants={TitleVariant({ currentDelay: 0.2 })}>
+          <TextParagraph icoText={"@"} text={"Связь со мной"} />
+        </WrapperMotion>
+        {/* prettier-ignore */}
+        <div className={styles.wrapper}>
           <div className={styles.info}>
             <WrapperMotion newVariants={TitleVariant({currentDelay:0.5})}>
               <h1>
@@ -36,6 +42,7 @@ export default function ContactMe() {
             </div>
           </WrapperMotion>
         </div>
-    </section>
+      </section>
+    </>
   );
 }

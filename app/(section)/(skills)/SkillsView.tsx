@@ -23,7 +23,9 @@ const SkillsView = () => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    mainControls.start("visible");
+    if (isInView) {
+      mainControls.start("visible");
+    }
   }, [isInView]);
   return (
     <div className={styles.wrapper}>

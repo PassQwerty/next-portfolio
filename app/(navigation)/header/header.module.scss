@@ -59,6 +59,11 @@ html[theme="dark"] {
       color: #2e2e2e;
     }
 
+    span {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
     .link {
       color: $color-text;
       position: relative;

@@ -9,7 +9,8 @@ import {
   TitleVariant,
 } from "./MotionIntro";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
+import ButtonGo from "@/app/components/button/ButtonGo";
 
 export default function IntroSection() {
   return (
@@ -24,16 +25,17 @@ export default function IntroSection() {
               я <mark>FullStack</mark> Web Developer.
             </span>
           </motion.div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={ButtonVariant}
-          >
-            <Link href="/#projects" className={styles.btn}>
-              Мои проекты
-            </Link>
-          </motion.div>
-
+          <WrapperClientComponent>
+            <ButtonGo targetElement={"myProject"} offsetTop={-70}>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={ButtonVariant}
+              >
+                <button className={styles.btn}>Мои проекты</button>
+              </motion.div>
+            </ButtonGo>
+          </WrapperClientComponent>
           {/* <WrapperClientComponent>
             <ButtonGo targetLink={"#/projects"} />
           </WrapperClientComponent> */}

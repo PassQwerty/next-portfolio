@@ -1,13 +1,7 @@
-import Link from "next/link";
 import styles from "./footer.module.scss";
-import {
-  BsArrowUpCircle,
-  BsFillEnvelopeOpenFill,
-  BsGithub,
-} from "react-icons/bs";
-import ThemeChanger from "@/app/Context/ThemeChanger";
 import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
 import ButtonGoTop from "@/app/components/button/ButtonGoTop";
+import Contacts from "@/app/components/Contacts/Contacts";
 
 export default function TheFooter() {
   return (
@@ -19,15 +13,7 @@ export default function TheFooter() {
         </WrapperClientComponent>
 
         <div className={styles.contacts}>
-          <ThemeChanger />
-          <Link href="/">
-            {/* prettier-ignore */}
-            <BsGithub className={styles.icon}/>
-          </Link>
-          <Link href="/">
-            {/* prettier-ignore */}
-            <BsFillEnvelopeOpenFill className={styles.icon}/>
-          </Link>
+          <Contacts style={styles.icon} />
         </div>
       </div>
     </footer>
