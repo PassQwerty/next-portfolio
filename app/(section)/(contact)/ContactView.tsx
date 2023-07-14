@@ -7,20 +7,23 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import ContactIcon from "./ContactIcon";
 
-const itemIcons = [
+const itemIcons: ContactPropsIcon[] = [
   {
-    title: "Gmail",
     icon: BsFillEnvelopeOpenFill,
+    title: "Gmail",
+    link: "mailto:vdwork0@gmail.com?subject=Вопрос по услуге",
     styleIcon: styles.BsFillEnvelopeOpenFill,
   },
   {
-    title: "WhatsApp",
     icon: BsWhatsapp,
+    title: "WhatsApp",
+    link: "https://wa.me/+79002331047?text=Здравствуйте%2C+у+меня+есть+вопрос+по+услуге",
     styleIcon: styles.BsWhatsapp,
   },
   {
-    title: "Telegram",
     icon: BsTelegram,
+    title: "Telegram",
+    link: "https://t.me/+79002331047",
     styleIcon: styles.BsTelegram,
   },
 ];
@@ -52,6 +55,7 @@ const ContactView = () => {
           <ContactIcon
             key={item.title}
             icon={item.icon}
+            link={item.link}
             title={item.title}
             styleIcon={item.styleIcon}
           />

@@ -50,6 +50,7 @@ interface ProjectViewProps {
 interface ContactPropsIcon {
   icon: IconType;
   title: string;
+  link: string;
   styleIcon: string;
 }
 

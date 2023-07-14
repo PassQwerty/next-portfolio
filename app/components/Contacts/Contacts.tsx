@@ -14,7 +14,7 @@ const Contacts = ({ style }: Props) => {
         {/* prettier-ignore */}
         <BsGithub className={style}/>
       </Link>
-      <Link href="/">
+      <Link href="mailto:vdwork0@gmail.com?subject=Вопрос по услуге">
         {/* prettier-ignore */}
         <BsFillEnvelopeOpenFill className={style}/>
       </Link>
