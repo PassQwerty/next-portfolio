@@ -1,8 +1,8 @@
 "use client";
 
-import ProjectItem from "@/app/components/Item/ProjectItem";
 import { motion } from "framer-motion";
 import { listVariants } from "./MotionProject";
+import ProjectItem from "@/components/Item/ProjectItem";
 
 const ProjectView = ({ data, sliceData = -3 }: ProjectViewProps) => {
   const projects = sliceData

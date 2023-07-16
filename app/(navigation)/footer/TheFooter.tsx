@@ -1,7 +1,7 @@
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
 import styles from "./footer.module.scss";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import ButtonGoTop from "@/app/components/button/ButtonGoTop";
-import Contacts from "@/app/components/Contacts/Contacts";
+import ButtonGoTop from "@/components/button/ButtonGoTop";
+import Contacts from "@/components/Contacts/Contacts";
 
 export default function TheFooter() {
   return (

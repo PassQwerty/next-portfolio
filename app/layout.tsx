@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import TheHeader from "./(navigation)/header/TheHeader";
 import TheFooter from "./(navigation)/footer/TheFooter";
-import { GlobalContextProvider } from "./Context/Store";
+import { GlobalContextProvider } from "../Context/Store";
 
 const font = Montserrat({ subsets: ["latin"] });
 

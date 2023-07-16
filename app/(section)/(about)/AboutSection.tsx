@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./about.module.scss";
-import TextParagraph from "@/app/components/textParagraph/TextParagraph";
-import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { ImageVariant, TitleVariant } from "./MotionAbout";
 import ViewItemsInfo from "./ViewItemsInfo";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import Anchor from "@/app/components/anchor/Anchor";
+import WrapperMotion from "@/components/wrappers/WrapperMotion";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import Anchor from "@/components/anchor/Anchor";
+import TextParagraph from "@/components/textParagraph/TextParagraph";
 
 export default function AboutSection() {
   return (

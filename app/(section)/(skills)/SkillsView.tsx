@@ -1,11 +1,11 @@
 "use client";
 
 import styles from "./skills.module.scss";
-import LoadIcon from "@/app/components/Icon/LoadIcon";
-import { ICONS } from "@/app/constants/infoArrays";
-import { listIconsVariants, listVariants } from "./MotionSkills";
+import { ICONS } from "@/constants/infoArrays";
+import { listIconsVariants } from "./MotionSkills";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import LoadIcon from "@/components/Icon/LoadIcon";
 
 const itemLoadIcon: JSX.Element[] = [
   <LoadIcon headerText={"Front-End"} items={ICONS.FrontEnd} />,

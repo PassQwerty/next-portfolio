@@ -1,6 +1,6 @@
 "use client";
 
-import { Links, useGlobalContext } from "@/app/Context/Store";
+import { Links, useGlobalContext } from "@/Context/Store";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 

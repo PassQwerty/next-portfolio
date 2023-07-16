@@ -1,10 +1,10 @@
-import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import styles from "./skills.module.scss";
-import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { TextVariant, TitleVariant } from "./MotionSkills";
 import SkillsView from "./SkillsView";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import Anchor from "@/app/components/anchor/Anchor";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import Anchor from "@/components/anchor/Anchor";
+import WrapperMotion from "@/components/wrappers/WrapperMotion";
+import TextParagraph from "@/components/textParagraph/TextParagraph";
 
 export default function SkillsSection() {
   return (

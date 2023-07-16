@@ -8,12 +8,12 @@ import {
   useState,
 } from "react";
 import styles from "./works.module.scss";
-import { ALL_CATEGORIES_WORKS } from "@app/constants/infoArrays";
-import PreloaderItems from "@/app/components/loadings/PreloaderItems";
-import ProjectView from "../../(section)/(project)/ProjectView";
-import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
+import { ALL_CATEGORIES_WORKS } from "@/constants/infoArrays";
 import { TitleVariant, listIconsVariants } from "./MotionProject";
 import { motion, useAnimation, useInView } from "framer-motion";
+import WrapperMotion from "@/components/wrappers/WrapperMotion";
+import PreloaderItems from "@/components/loadings/PreloaderItems";
+import ProjectView from "@/app/(section)/(project)/ProjectView";
 
 export default function Works() {
   const [data, setData] = useState<Project[]>([]);

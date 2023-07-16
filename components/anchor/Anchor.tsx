@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./anchor.module.scss";
-import { Links, useGlobalContext } from "@/app/Context/Store";
+import { Links, useGlobalContext } from "@/Context/Store";
 
 interface Props {
   selected: keyof Links;

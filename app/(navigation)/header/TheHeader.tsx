@@ -1,12 +1,10 @@
 import Link from "next/link";
 import styles from "./header.module.scss";
-import { BsFillEnvelopeOpenFill, BsGithub, BsMoon } from "react-icons/bs";
-import ThemeChanger from "@/app/Context/ThemeChanger";
-import ButtonGo from "@/app/components/button/ButtonGo";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import { Links } from "@/app/Context/Store";
-import Anchor from "@/app/components/anchor/Anchor";
-import Contacts from "@/app/components/Contacts/Contacts";
+import { Links } from "@/Context/Store";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import Anchor from "@/components/anchor/Anchor";
+import ButtonGo from "@/components/button/ButtonGo";
+import Contacts from "@/components/Contacts/Contacts";
 
 type LinkItem = LinkRef | AnchorRef;
 

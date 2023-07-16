@@ -9,8 +9,8 @@ import {
   TitleVariant,
 } from "./MotionIntro";
 import { motion } from "framer-motion";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import ButtonGo from "@/app/components/button/ButtonGo";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import ButtonGo from "@/components/button/ButtonGo";
 
 export default function IntroSection() {
   return (

@@ -1,11 +1,11 @@
-import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import styles from "./contact.module.scss";
 import Image from "next/image";
-import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import { ImageVariant, TitleVariant } from "./MotionContact";
 import ContactView from "./ContactView";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
-import Anchor from "@/app/components/anchor/Anchor";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import Anchor from "@/components/anchor/Anchor";
+import WrapperMotion from "@/components/wrappers/WrapperMotion";
+import TextParagraph from "@/components/textParagraph/TextParagraph";
 
 export default function ContactMe() {
   return (

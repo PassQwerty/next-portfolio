@@ -1,15 +1,15 @@
 import styles from "./project.module.scss";
-import TextParagraph from "@/app/components/textParagraph/TextParagraph";
 import Link from "next/link";
-import WrapperMotion from "@/app/components/wrappers/WrapperMotion";
 import {
   ButtonVariant,
   DelayBlockProject,
   TitleVariant,
 } from "./MotionProject";
 import ProjectView from "./ProjectView";
-import Anchor from "@/app/components/anchor/Anchor";
-import WrapperClientComponent from "@/app/components/wrappers/WrapperClientComponent";
+import WrapperClientComponent from "@/components/wrappers/WrapperClientComponent";
+import Anchor from "@/components/anchor/Anchor";
+import TextParagraph from "@/components/textParagraph/TextParagraph";
+import WrapperMotion from "@/components/wrappers/WrapperMotion";
 
 export default function ProjectSection(data: Project[]) {
   return (

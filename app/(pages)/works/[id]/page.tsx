@@ -79,17 +79,28 @@ const WorksItem = () => {
             <div className={styles.container1}>
               <span className={styles.text}>{data.name}</span>
               <div className={styles.links}>
-                <Link className={styles.link} href={data.source}>
-                  <ReactSVG className={styles.icon} src="/favicon/source.svg" />
-                  <span>Source</span>
-                </Link>
-                <Link className={styles.link} href={data.demo}>
-                  <ReactSVG
-                    className={styles.iconDemo}
-                    src="/favicon/demo.svg"
-                  />
-                  <span>Demo</span>
-                </Link>
+                {data.source.length > 0 ? (
+                  <Link className={styles.link} href={data.source}>
+                    <ReactSVG
+                      className={styles.icon}
+                      src="/favicon/source.svg"
+                    />
+                    <span>Source</span>
+                  </Link>
+                ) : (
+                  ""
+                )}
+                {data.demo.length > 0 ? (
+                  <Link className={styles.link} href={data.demo}>
+                    <ReactSVG
+                      className={styles.iconDemo}
+                      src="/favicon/demo.svg"
+                    />
+                    <span>Demo</span>
+                  </Link>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
             <div className={styles.container2}>

@@ -1,4 +1,4 @@
-import ThemeChanger from "@/app/Context/ThemeChanger";
+import ThemeChanger from "@/Context/ThemeChanger";
 import Link from "next/link";
 import { BsFillEnvelopeOpenFill, BsGithub } from "react-icons/bs";
 
